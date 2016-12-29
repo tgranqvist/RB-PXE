@@ -1,0 +1,20 @@
+DEFAULT vesamenu.c32
+PROMPT 0
+MENU INCLUDE pxelinux.cfg/pxe.cfg
+NOESCAPE 1
+
+LABEL localboot
+MENU LABEL ^1. Boot from Local Hard Drive
+LOCALBOOT 0
+
+LABEL DBAN
+MENU LABEL ^2. Run DBAN
+KERNEL memdisk
+INITRD bootables/dban-2.3.0_i586.iso
+APPEND iso
+
+LABEL FreeDOS
+MENU LABEL ^3. FreeDOS from ISO
+kernel memdisk
+INITRD bootables/fdboot.img
+APPEND harddisk
