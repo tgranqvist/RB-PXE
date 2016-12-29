@@ -2,6 +2,7 @@
 PXE bootable environment with RouterBOARD. Boots ISOs and IMGs using MEMDISK.
 
 ##How to use:
+- Clone/download this repo
 - Download the bootable images you want
 - Put them in the bootables folder
 - Update the menu entries in pxelinux.cfg to point to these images (see example in the file)
